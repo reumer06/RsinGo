@@ -1,0 +1,41 @@
+1. TCP/IP Networking Basics
+
+    Client-Server Model: Client initiates (Dial). Server listens (Listen). Must have both running to connect.
+
+    TCP Handshake: Three-way handshake mechanics. Understand states: LISTEN, SYN_SENT, ESTABLISHED.
+
+    Sockets: IP address plus port combinations. Loopback address (127.0.0.1) usage for local testing.
+
+2. Go Network Programming (net Package)
+
+    Connection Object: Master net.Conn interface. Learn read/write operations.
+
+    I/O Streams: Learn io.Reader and io.Writer. Core of Go data movement.
+
+    Server Setup: Learn net.Listen(). Essential for receiving inbound connections.
+
+3. Process Management (os/exec Package)
+
+    I/O Redirection: Standard Input (Stdin), Output (Stdout), Error (Stderr). How OS routes text streams.
+
+    Execution: How exec.Command() spawns background binaries.
+
+    Blocking: cmd.Run() stops execution until process finishes. Learn cmd.Start() for non-blocking.
+
+4. OS Environment Architecture
+
+    Shell Differences: Linux uses /bin/sh. Windows uses cmd.exe or powershell.exe. Code must match target OS.
+
+    Paths: Environment variables, executable paths, system permissions constraints.
+
+5. Go Language Mechanics
+
+    Error Handling: Replace _. Implement if err != nil checks. Stops silent program failures.
+
+    Goroutines: Use go keyword. Needed for simultaneous bidirectional data copy.
+
+6. Infrastructure & Routing
+
+    Firewalls: Inbound vs Outbound blocking rules.
+
+    IP Types: Public IP vs Local Private IP (192.168.x.x). NAT and port forwarding concepts.

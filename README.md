@@ -24,7 +24,7 @@ RsinGo is a cross platform reverse shell client that provides remote command exe
 
 ### Pre-built Binaries
 
-You can download the pre-compiled binary directly from the [v1.0 Release](https://github.com/reumer06/RsinGo/releases/download/v1.0/rs.exe).
+You can download the pre-compiled binary directly from the [Release](https://github.com/reumer06/RsinGo/releases/download/v1.0/rs.exe).
 
 ## Build
 

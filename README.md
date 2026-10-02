@@ -36,4 +36,4 @@ go build -o bin/rsingo.exe ./src
 
 ## License
 
-This project is licensed under the terms of the MIT License. See the [LICENSE](https://www.google.com/search?q=LICENSE) file for details.
+This project is licensed under the terms of the MIT License. See the [LICENSE](https://opensource.org/license/mit) file for details.
